@@ -386,7 +386,7 @@
                         <a href="<%= data.url %> " class="m-btn" title="Documentation link" target="_blank">view details</a>
                     </div>
                   </div>
-
+                 
                 <% }) %>
 
                </div>
@@ -440,10 +440,10 @@
 
                        </p>
                      </div>
-                     <!-- <button class="m-btn">
+                     <!-- <button class="m-btn"> 
                        <a href="<%= data.url %> " class="m-btn" title="Documentation link" target="_blank">view
                          details</a>
-                     <!-- </button>
+                     <!-- </button> 
                    </div>
                  </div>
 
@@ -494,13 +494,13 @@
                            <a href="mailto:<%= list.owner %>" class="text-body"><%= list.owner %></a>
                          </td>
                          <td>
-                           <%= list.createdOn %>
+                           <%= list.createdOn %> 
                          </td>
                          <td>
                            <a href="<%= list.url %>" class="btn preview-api">preview</a>
                          </td>
                          <td>
-                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary <% list.status=='approved' ? 'disabled' : '' %>">Approve</a>
+                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary <% list.status=='approved' ? 'd-none' : '' %>">Approve</a>
                          </td>
                          <td>
                            <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Disapprove</a>
@@ -529,6 +529,7 @@
                          <th>API Owner</th>
                          <th>Created On</th>
                          <th>Preview API</th>
+                         <th>Approve API</th>
                          <th>Disapprove API</th>
                        </tr>
                      </thead>
@@ -542,11 +543,11 @@
                            <a href="mailto:<%= list.owner %>" class="text-body"><%= list.owner %></a>
                          </td>
                          <td>
-                           <%= list.createdOn %>
+                           <%= list.createdOn %> 
                          </td>
                          <td>
                            <a href="<%= list.url %>" class="btn preview-api">preview</a>
-                         </td>
+                         </td>               
                          <td>
                            <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Delete</a>
                          </td>
@@ -588,7 +589,7 @@
                            <a href="mailto:<%= list.owner %>" class="text-body"><%= list.owner %></a>
                          </td>
                          <td>
-                           <%= list.createdOn %>
+                           <%= list.createdOn %> 
                          </td>
                          <td>
                            <a href="<%= list.url %>" class="btn preview-api">preview</a>
