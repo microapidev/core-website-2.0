@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router()
 
-const adminCrl = require('../controller/admin');
+const admin = require('../controllers/admin');
 
-router.post('/login', adminCrl.login);
-
-//Handle incoming GET requests to /admin
-// router.get("/admin", adminCrl.admin_get_all);
+router.post('/login', admin.login);
 
 module.exports= router;
