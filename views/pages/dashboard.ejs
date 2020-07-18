@@ -475,19 +475,19 @@
                    <table class="table table-centered table-nowrap mb-0">
                      <thead class="thead-light">
                        <tr>
-                         <th>API Id</th>
-                         <th>API Name</th>
-                         <th>API Owner</th>
+                         <th>ID</th>
+                         <th>Name</th>
+                         <th>Owner</th>
                          <th>Created On</th>
-                         <th>Preview API</th>
-                         <th>Approve API</th>
-                         <th>Disapprove API</th>
+                         <th>Preview</th>
+                         <th>Approve</th>
+                         <th>Disapprove</th>
                        </tr>
                      </thead>
                      <tbody>
                        <% allApis.forEach(list => { %>
                        <tr>
-                         <td><a href="javascript: void(0);" class="text-body font-weight-bold">#<%= list.id %> </a>
+                         <td><a href="javascript: void(0);" class="text-body font-weight-bold">#<%= list.id.substring(list.id.length-5) %> </a>
                        </td>
                          <td><%= list.name %></td>
                          <td>
@@ -524,19 +524,19 @@
                    <table class="table table-centered table-nowrap mb-0">
                      <thead class="thead-light">
                        <tr>
-                         <th>API Id</th>
-                         <th>API Name</th>
-                         <th>API Owner</th>
+                         <th>ID</th>
+                         <th>Name</th>
+                         <th>Owner</th>
                          <th>Created On</th>
-                         <th>Preview API</th>
-                         <th>Approve API</th>
-                         <th>Disapprove API</th>
+                         <th>Preview</th>
+                         <th>Approve</th>
+                         <th>Disapprove</th>
                        </tr>
                      </thead>
                      <tbody>
                        <% approvedApis.forEach(list => { %>
                        <tr>
-                         <td><a href="javascript: void(0);" class="text-body font-weight-bold">#<%= list.id %> </a>
+                         <td><a href="javascript: void(0);" class="text-body font-weight-bold">#<%= list.id.substring(list.id.length-5) %> </a>
                        </td>
                          <td><%= list.name %></td>
                          <td>
@@ -570,19 +570,19 @@
                    <table class="table table-centered table-nowrap mb-0">
                      <thead class="thead-light">
                        <tr>
-                         <th>API Id</th>
-                         <th>API Name</th>
-                         <th>API Owner</th>
+                         <th>Id</th>
+                         <th>Name</th>
+                         <th>Owner</th>
                          <th>Created On</th>
-                         <th>Preview API</th>
-                         <th>Approve API</th>
-                         <th>Disapprove API</th>
+                         <th>Preview</th>
+                         <th>Approve</th>
+                         <th>Disapprove</th>
                        </tr>
                      </thead>
                      <tbody>
                        <% pendingApis.forEach(list => { %>
                        <tr>
-                         <td><a href="javascript: void(0);" class="text-body font-weight-bold">#<%= list.id %> </a>
+                         <td><a href="javascript: void(0);" class="text-body font-weight-bold">#<%= list.id.substring(list.id.length-5) %> </a>
                        </td>
                          <td><%= list.name %></td>
                          <td>
