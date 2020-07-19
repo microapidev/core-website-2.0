@@ -16,7 +16,7 @@ exports.delete = async (req, res) => {
 
 exports.register = (req, res) => {
     res.render('pages/addapi', {
-        pageName: 'MicroAPI | Submit API'
+        pageTitle: 'Submit API'
     });
 }
 

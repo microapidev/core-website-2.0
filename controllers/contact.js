@@ -2,14 +2,13 @@ const commentModel = require("../models/contactform");
 
 exports.form = (req, res) => {
     res.render('pages/contact', {
-        pageName: 'contact',
         pageTitle: 'Contact'
     });
 }
 
 exports.action = (req, res) => {
-    const { fname, email, comments } = req.body;
-    const newComment = new commentModel({ fname, email, comments });
+    const { name, email, comments } = req.body;
+    const newComment = new commentModel({ name, email, comments });
 
     newComment.save().then( () => {
         req.flash("success", "Thanks for contacting us...");

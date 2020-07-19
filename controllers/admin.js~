@@ -43,7 +43,7 @@ exports.login = (req, res) => {
                 if(result) {
                     req.session.auth = true;
                     req.session.email = admin.email;
-                    req.flash('success', 'Welcome back Admin, You\'re now logged in');
+                    req.flash('success', 'Welcome back, You\'re logged in');
                     res.redirect('/dashboard');
                 }else {
                     req.flash('error', 'Invalid Password');
