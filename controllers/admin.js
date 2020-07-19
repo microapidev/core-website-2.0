@@ -1,8 +1,27 @@
 const Admins = require('../models/admins');
+const apiModel = require("../models/api");
+
 const { isEmpty, isEmail } = require('validator');
 const bcrypt = require('bcryptjs');
 
-// Admin Login 
+// Admin Dashboard
+exports.dashboard = async (req, res) => {
+    var allApis = await apiModel.find({});
+    var approvedApis = await apiModel.find({ status: "approved" });
+    var pendingApis = await apiModel.find({ status: "pending" });
+
+    res.render('pages/dashboard', {
+        pageName: 'Admin Dashboard',
+        allApisCount: allApis.length,
+        pendingApisCount: pendingApis.length,
+        approvedApisCount: approvedApis.length,
+        allApis: allApis,
+        pendingApis: pendingApis,
+        approvedApis: approvedApis
+    });
+}
+
+// Admin Login
 exports.login = (req, res) => {
 
     const { email, password } = req.body;
@@ -14,7 +33,7 @@ exports.login = (req, res) => {
         req.flash('error', 'Please enter a valid email');
         res.redirect('/login');
     }
-    
+
     Admins.findOne({ email }).then(admin => {
         if(!admin) {
             req.flash('error', 'Email does not exist in our record');
@@ -33,7 +52,8 @@ exports.login = (req, res) => {
             })
         }
     }).catch(err => {
-        res.json("Errr")
+        req.flash('error', 'Sorry, an error occured during login');
+        res.redirect('/login');
     })
 }
 
