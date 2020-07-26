@@ -25,3 +25,9 @@ exports.about = (req, res) => {
         pageTitle: 'About'
     });
 }
+
+exports.blog = (req, res) => {
+    res.render('pages/blog', {
+        pageTitle: 'blog'
+    });
+}
