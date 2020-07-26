@@ -9,6 +9,7 @@ const contact = require("../controllers/contact");
 router.get('/', index.home);
 router.get('/about', index.about);
 router.get('/login', index.loginForm);
+router.get('/blog', index.blog);
 
 // Admin Routes
 router.get('/dashboard', auth, admin.dashboard);
